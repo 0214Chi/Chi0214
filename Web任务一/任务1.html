@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>任务一</title>
+	</head>
+	<body>
+		派克特 - 24小时 (Live)
+		<audio src="派克特 - 24小时 (Live).mp3" id="audios"></audio>
+		<input type="button" value="播放" id="playaudio" onclick="play()" />
+		<input type="button" value="暂停" id="pauseaudio" onclick="pause()" disabled="disabled" />
+		<br />
+		派克特 - Y (Live)
+		<audio src="派克特 - Y (Live).mp3" id="audios1"></audio>
+		<input type="button" value="播放" id="play1audio" onclick="play1()" />
+		<input type="button" value="暂停" id="pause1audio" onclick="pause1()" disabled="disabled" />
+	</body>
+	<script type="text/javascript">
+		function play(){
+			var playbutton = document.getElementById('playaudio');
+			var pausebutton = document.getElementById('pauseaudio');
+			var audio = document.getElementById('audios');
+			audio.play();
+			
+			playbutton.disabled=true;
+			pausebutton.disabled=false;
+		}
+		function pause(){
+			var playbutton = document.getElementById('playaudio');
+			var pausebutton = document.getElementById('pauseaudio');
+			var audio = document.getElementById('audios');
+			audio.pause();
+			playbutton.disabled=false;
+			pausebutton.disabled=true;
+		}
+		function play1(){
+			var play1button = document.getElementById('play1audio');
+			var pause1button = document.getElementById('pause1audio');
+			var audio = document.getElementById('audios1');
+			audio.play();
+			play1button.disabled=true;
+			pause1button.disabled=false;
+		}
+		function pause1(){
+			var play1button = document.getElementById('play1audio');
+			var pause1button = document.getElementById('pause1audio');
+			var audio = document.getElementById('audios1');
+			audio.pause();
+			play1button.disabled=false;
+			pause1button.disabled=true;
+		}
+	</script>
+</html>
