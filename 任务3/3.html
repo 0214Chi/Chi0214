@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+
+
+<html> 
+    <head> 
+	    <meta charset="utf-8" /> 
+	    <title>页面换肤</title> 
+	    <style> 
+	        fieldset{width: auto;height: auto;} 
+	    	legend{color: red;font-weight: bold;font-size: 20px;} 
+	    	#up{border:2px solid #CCCCFF;height: 70px;margin-bottom:10px;} 
+	    	#down{height: 180px;} 
+	    	li{list-style: none;width: 30px;height: 30px;float: left;margin-top: 10px;margin-left: 15px;} 
+	    	#gray{background-color: #CCCCCC;} 
+	    	#purple{background-color: #9900CC;} 
+	    	#red{background-color: #FF3300;} 
+	    	#blue{background-color: #66CCFF;} 
+	    	#yellow{background-color: #FFCC00;} 
+	    	#green{background-color: #66FF33;} 
+	   	   </style> 
+    </head> 
+    <body> 
+    	<fieldset> 
+    		<legend>页面换肤</legend> 
+    		<div id="up"> 
+    			<ul> 
+    				<li id="gray"></li> 
+    				<li id="purple"></li> 
+    				<li id="red"></li> 
+    				<li id="blue"></li> 
+    				<li id="yellow"></li> 
+    				<li id="green"></li> 
+    			</ul> 
+    		</div> 
+    		<div id="down"> 
+    			LocalStorage将数据保存在客户端本地的硬件设备中，即使浏览器被关闭了，该数据仍然存在，下次打开浏览器访问网站时仍然可以继续使用 
+    		</div> 
+    	</fieldset> 
+    </body> 
+    <script> 
+    	var colors = document.getElementById("down"); 
+    	var lis = document.getElementsByTagName("li"); 
+    	var arr = ["#CCCCCC","#9900CC","#FF3300","#66CCFF","#FFCC00","#66FF33"]; 
+        for(var i = 0;i<lis.length;i++){ 
+        	lis[i].style.backgroundColor=arr[i]; 
+        	lis[i].index=i; 
+        	lis[i].onclick = function(){ 
+        			lis[this.index].style.marginTop="3px"; 
+        		    for(var j=0;j<this.index;j++){ 
+        		    	lis[j].style.marginTop="10px"; 
+        		    } 
+        		    for(var m=this.index+1;m<lis.length;m++){ 
+        		    	lis[m].style.marginTop="10px";
+        		    } 
+        		colors.style.backgroundColor = arr[this.index]; 
+        		localStorage.setItem("color",arr[this.index]); 
+        	} 
+        	window.onload = function(){
+        		colors.style.backgroundColor = localStorage.getItem("color"); 
+        	} 
+        } 
+    </script> 
+</html> 
