@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<meta charset="UTF-8"> 
+		<title>上传头像</title> 
+		<style> 
+			div{border:1px solid #000000;height: 400px;width: 200px;} 
+		</style> 
+	</head> 
+	<body> 
+		上传头像 
+		<div id="data1" ondrop="drop(event)" ondragover="allowDrop(event)"></div> 
+	</body> 
+	<script> 
+	    function allowDrop(ev){  
+    	    ev.preventDefault();  
+	    } 
+	    function drop(ev){ 
+		ev.preventDefault();  
+    	var data=ev.dataTransfer.files[0].type; 
+    	if(/image\/\w+/.test(data)){ 
+    		let reader = new FileReader(); 
+    		reader.readAsDataURL(ev.dataTransfer.files[0]); 
+    		reader.onload = function(ev){ 
+    			var img_result=document.getElementById("data1"); 
+    			img_result.innerHTML = '<img src="'+this.result+'" alt=" "/>'; 
+    		} 
+    	} 
+    	} 
+	</script> 
+</html>
