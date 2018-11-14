@@ -1,0 +1,87 @@
+<ion-header text-center color="#fafafa">
+    <ion-navbar>
+      <ion-searchbar
+      [(ngModel)]="myInput" placeholder="双十二特惠好物超低价"
+      [showCancelButton]="shouldShowCancel"
+      (ionInput)="onInput($event)"
+      (ionCancel)="onCancel($event)"></ion-searchbar>
+    </ion-navbar>
+</ion-header>
+<!-- toolsbar 弹窗 -->
+
+<ion-content>
+  <img style="display:block;" src="../../assets/imgs/sc1.png">
+  <ul class="navList">
+    <li (click)="isClick(0)" [class.first]="isActive==0" >客厅</li>
+    <li (click)="isClick(1)" [class.first]="isActive==1" >卧室</li>
+    <li (click)="isClick(2)" [class.first]="isActive==2" >餐厅</li>
+    <li (click)="isClick(3)" [class.first]="isActive==3" >书房</li>
+    <li (click)="isClick(4)" [class.first]="isActive==4" >门厅</li>
+  </ul>
+  <div [ngSwitch]="isActive">
+    <div *ngSwitchCase="0">
+      <ion-grid>
+        <div text-center>——— 沙发 ———<span><ion-icon name="pricetag"></ion-icon></span></div>
+        <ion-row>
+          <ion-col col-6>
+            <img src="../../assets/imgs/sc2_03.png">
+          </ion-col>
+          <ion-col col-6>
+            <img src="../../assets/imgs/sc3_03.png">
+          </ion-col>
+          <ion-col col-6 class="zi">
+            <img src="../../assets/imgs/sc4_03.png">
+            <p>罗德蒙简约植绒布艺沙发<span>RMB 6500</span></p>
+          </ion-col>
+          <ion-col col-6>
+            <img src="../../assets/imgs/sc5_03.png">
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <div text-center>——— 电视柜 ———<span><ion-icon name="pricetag"></ion-icon></span></div>
+        <ion-row>
+          <ion-col col-6>
+            <img src="../../assets/imgs/sc2_03.png">
+          </ion-col>
+          <ion-col col-6>
+            <img src="../../assets/imgs/sc3_03.png">
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+    
+  <!-- <ion-slides (ionSlideDidChange)="change()" loop="true" pager="true" autoplay="1000" paginationType class="li">
+    <ion-slide>
+      <h1>Slide 1</h1>
+    </ion-slide>
+    <ion-slide>
+      <h1>Slide 2</h1>
+    </ion-slide>
+    <ion-slide>
+      <h1>Slide 3</h1>
+    </ion-slide>
+  </ion-slides>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        1 of 2
+      </ion-col>
+      <ion-col>
+        2 of 2
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        1 of 3
+      </ion-col>
+      <ion-col col-6>
+        2 of 3
+      </ion-col>
+      <ion-col col-6>
+        3 of 3
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+</ion-content>

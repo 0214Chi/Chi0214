@@ -1,0 +1,41 @@
+page-dingdan {
+    ion-content{
+        .big{
+            width: 100%;
+            height: auto;
+            .small{
+                width: 100%;
+                height: 180px;
+                border-bottom: 1px solid #eee;
+                img{
+                    width: 46%;
+                    float: left;
+                    padding-right: 20px;
+                }
+                p{
+                    color: #717171;
+                    margin: 5px auto;
+                    span{
+                        float: right;
+                    }
+                    .r{color: red;}
+                }
+                .b{color: black;font-size: 16px;}
+                .right{
+                    color: black;
+                    font-size: 20px;
+                    float: right;
+                }
+            }
+            .time{
+                margin-top: 3px;
+                height: 30px;
+                color: #717171;
+                .da{
+                    float: right;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

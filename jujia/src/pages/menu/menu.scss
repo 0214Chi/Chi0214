@@ -1,0 +1,65 @@
+page-menu {
+    
+    
+    ion-content{
+        .header{
+            position: relative;
+            height: auto;
+            .touxiang{
+                position: absolute;
+                top: 17%;
+                left: 37%;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+            p{
+                position: absolute;
+                bottom: 3%;
+                left: 37%;
+                font-size: 20px;
+            }
+        }
+        ion-grid{
+            background-color: #eee;
+            height: auto;
+            width: 100%;
+            
+            div{
+                height: 50px;
+                line-height: 50px;
+                position: relative;
+            }
+            a{
+                position: absolute;
+                color:grey;;
+                right: 2px;
+            }
+            ion-col{
+                height: 100px;
+                position: relative;
+                text-align: center;
+                div{
+                    background-color: #fff;
+                    height: 100%;
+                    p{
+                        position: absolute;
+                        text-align: center;
+                        width: 100%;
+                        height: 12px;
+                        bottom: 20px;
+                    }
+                }
+                ion-icon{
+                    font-size: 30px;
+                    margin-top: 15px;
+                    color: grey;
+                }
+                
+            }
+        
+            
+        }
+
+       
+    }
+}

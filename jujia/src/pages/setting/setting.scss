@@ -1,0 +1,32 @@
+page-setting {
+    ion-content{
+        background-color: #eee!important;
+        .div{
+            background-color: #fff!important;
+            height: 180px;
+            div{
+                position: relative;
+                height: 60px;
+                line-height: 60px;
+                text-align: left;
+                padding-left: 5%;
+                font-size: 16px;
+                color: #717171;
+                span{
+                    position: absolute;
+                    right: 5%;
+                }
+            }
+            .div1{
+                border-bottom: 1px solid #eee;
+            }
+        }
+        button{
+            width: 100%;
+            height: 50px;
+            margin-top: 20px;
+            font-size: 16px;
+            background-color: #ffdb2c;
+        }
+    }
+}
